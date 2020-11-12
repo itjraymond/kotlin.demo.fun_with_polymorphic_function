@@ -25,6 +25,14 @@ hs_err_pid*
 
 # idea
 *.iml
+.idea
 
-# maven
+# maven or gradle
 mvnw
+.gradle
+gradle*
+build
+
+# vim
+*~
+*.swp
