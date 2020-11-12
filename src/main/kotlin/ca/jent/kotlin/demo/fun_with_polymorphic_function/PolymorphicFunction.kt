@@ -41,8 +41,8 @@ fun <A,B,C> hof_2(): ((A) -> B) -> ((B) -> C) -> (A) -> C =
         }
 
 // Usage of hof_1()
-// hof will now be a function that takes an function of (Int) -> Double which returns another function
-// that takes yet another function of (Double) -> String which return yet another function that takes
+// hof will now be a function that takes a function of (Int) -> Double which returns another function
+// that takes yet another function of (Double) -> String which return the composed function that takes
 // an (Int) -> String. So if we supply the Int value of 3 as the third function call (see below), it will
 // compute the value as a String:  "value is 3.21"
 val hof = hof_1<Int,Double,String>()
@@ -51,6 +51,6 @@ val result2 = hof(f)(g)(3)
 
 
 fun main() {
-    println(result) // "value is 3.21"
-    println(result2)
+    println(result)  // "value is 3.21"
+    println(result2) // "value is 3.21"
 }
